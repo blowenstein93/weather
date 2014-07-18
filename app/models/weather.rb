@@ -1,3 +1,5 @@
+require 'net/http'
+
 class Weather < ActiveRecord::Base
 
 validates :address, presence: true
