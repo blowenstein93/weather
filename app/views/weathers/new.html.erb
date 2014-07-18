@@ -1,0 +1,20 @@
+<%= form_for @weather do |w| %>
+    <div class="errors">
+        <% if @weather.errors.any? %>
+            <h2><%= pluralize(@weather.errors.count, "error") %> prohibited this post from being saved: </h2>
+            <ul>
+                <% @weather.errors.full_messages.each do |msg| %>
+                <li class="error_msg"><%= msg %></li>
+                <% end %>
+            </ul>
+        <% end %>
+    </div>
+
+
+    <p>Address:</p>
+    <%= w.text_field :address %>
+
+    <%=  w.submit "Submit" %>
+    <p>21 Stillman St San Francisco, CA 94107</p>
+
+<% end %>

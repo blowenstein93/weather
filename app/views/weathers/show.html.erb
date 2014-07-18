@@ -1,0 +1,17 @@
+<h2>Weather for <%= @weather.address%></h2>
+<p>Lat <%= @weather.lat %></p>
+<p>Lng <%= @weather.lng %></p>
+<ul>
+    <li>Forecast - <%= @weather.weather %></li>
+    <li>Temp: <%= @weather.temp %></li>
+    <li>precip_prob: <%= @weather.precip_prb %></li>
+    <li>precip_amt: <%= @weather.precip_amt %></li>
+    <li>humidity: <%= @weather.humidity %></li>
+    <li>wind_speed: <%= @weather.wind_speed %></li>
+    <li>temp in one hour: <%= @weather.temp_one %></li>
+    <li>temp in two hour <%= @weather.temp_two %></li>
+    <li>temp in three hour <%= @weather.temp_three %></li>
+    <li>temp in four hour <%= @weather.temp_four %></li>
+    <li>temp in five hour <%= @weather.temp_five %></li>
+    <li>weekly_summary: <%= @weather.weekly_summary %></li>
+</ul>

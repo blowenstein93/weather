@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  weather: MyString
+  address: MyString
+  lat: 1.5
+  lng: 1.5
+  temp: 1.5
+  precip_amt: 1.5
+  precip_prb: 1.5
+  humidity: 1.5
+  wind_speed: 1.5
+  temp_one: 1.5
+  temp_two: 1.5
+  temp_three: 1.5
+  temp_four: 1.5
+  temp_five: 1.5
+  weekly_summary: MyString
+
+two:
+  weather: MyString
+  address: MyString
+  lat: 1.5
+  lng: 1.5
+  temp: 1.5
+  precip_amt: 1.5
+  precip_prb: 1.5
+  humidity: 1.5
+  wind_speed: 1.5
+  temp_one: 1.5
+  temp_two: 1.5
+  temp_three: 1.5
+  temp_four: 1.5
+  temp_five: 1.5
+  weekly_summary: MyString
