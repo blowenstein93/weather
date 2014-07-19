@@ -1,7 +1,9 @@
+<h2>Perform a new weather lookup</h2>
+
 <%= form_for @weather do |w| %>
     <div class="errors">
         <% if @weather.errors.any? %>
-            <h2><%= pluralize(@weather.errors.count, "error") %> prohibited this post from being saved: </h2>
+            <h4><%= pluralize(@weather.errors.count, "error") %> prohibited this post from being saved: </h4>
             <ul>
                 <% @weather.errors.full_messages.each do |msg| %>
                 <li class="error_msg"><%= msg %></li>
@@ -11,10 +13,9 @@
     </div>
 
 
-    <p>Address:</p>
-    <%= w.text_field :address %>
+    <p>Address: <%= w.text_field :address %></p>
 
     <%=  w.submit "Submit" %>
-    <p>21 Stillman St San Francisco, CA 94107</p>
+    <h5>21 Stillman St San Francisco, CA 94107</h5>
 
 <% end %>

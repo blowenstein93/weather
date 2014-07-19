@@ -28,7 +28,7 @@ gem 'spring',        group: :development
 
 gem 'rails_12factor', group: :production
 
-gem "rake", "0.8.7"
+#gem "rake", "~> 10"
 
 ruby '2.0.0'
 
