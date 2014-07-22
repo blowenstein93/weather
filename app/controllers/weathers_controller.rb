@@ -29,7 +29,6 @@ class WeathersController < ApplicationController
             redirect_to(weather_path(@weather.id))
         else
             render 'new'
-
         end
     end
 
@@ -41,11 +40,17 @@ class WeathersController < ApplicationController
         @weathers = Weather.all
     end
 
+    def destroy
+        weather = Weather.find(params[:id])
+        weather.destroy
+        redirect_to root_path
+    end
+
 
     private
 
     def weather_params
-        params.require(:weather).permit(:lat, :lng, :weather, :address, :temp, :precip_prob, :precip_amt, :humidity, :wind_speed, :temp_one, :temp_two, :temp_three, :temp_four, :temp_five, :weekly_summary)
+        params.require(:weather).permit(:lat, :lng, :weather, :address, :temp, :precip_prob, :precip_amt, :humidity, :wind_speed, :temp_one, :temp_two, :temp_three, :temp_four, :temp_five, :weekly_summary, :user_id)
     end
 
 end

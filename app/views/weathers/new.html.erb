@@ -1,21 +1,25 @@
-<h2>Perform a new weather lookup</h2>
+<div class="forms">
+    <h2>New Weather Lookup</h2>
+    <%= form_for @weather do |w| %>
+        <div class="errors">
+            <% if @weather.errors.any? %>
+                <h4><%= pluralize(@weather.errors.count, "error") %> prohibited this post from being saved: </h4>
+                <ul>
+                    <% @weather.errors.full_messages.each do |msg| %>
+                    <li class="error_msg"><%= msg %></li>
+                    <% end %>
+                </ul>
+            <% end %>
+        </div>
 
-<%= form_for @weather do |w| %>
-    <div class="errors">
-        <% if @weather.errors.any? %>
-            <h4><%= pluralize(@weather.errors.count, "error") %> prohibited this post from being saved: </h4>
-            <ul>
-                <% @weather.errors.full_messages.each do |msg| %>
-                <li class="error_msg"><%= msg %></li>
-                <% end %>
-            </ul>
-        <% end %>
-    </div>
 
+        <p>Address: <%= w.text_field :address %></p>
+        <p>User: <%= w.collection_select :user_id, User.all, :id, :name %></p>
 
-    <p>Address: <%= w.text_field :address %></p>
+        <%= w.submit "Submit", class: "submit" %>
 
-    <%=  w.submit "Submit" %>
-    <h5>21 Stillman St San Francisco, CA 94107</h5>
+        <h5>21 Stillman St San Francisco, CA 94107</h5>
 
-<% end %>
+    <% end %>
+</div>
+

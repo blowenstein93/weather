@@ -1,0 +1,26 @@
+
+<ul class="userheader">
+    <li><h2>Welcome <%=@user.name %></h2></li>
+    <li><%= link_to "new weather lookup", new_weather_path(@user.id), class: "link" %></li>
+    <li><%= link_to "Delete this account and all associated notifications", @user, method: :delete, class: "link" %></li>
+</ul>
+<ul>
+    <% @weathers.each do |w|%>
+        <div class="userweathers">
+            <h4>Weather for <%= w.address %></h4>
+            <li>Forecast - <%= w.weather %></li>
+            <li>Temp: <%= w.temp %></li>
+            <li>precip_prob: <%= w.precip_prb %></li>
+            <li>precip_amt: <%= w.precip_amt %></li>
+            <li>humidity: <%= w.humidity %></li>
+            <li>wind_speed: <%= w.wind_speed %></li>
+            <li>temp in one hour: <%= w.temp_one %></li>
+            <li>temp in two hour <%= w.temp_two %></li>
+            <li>temp in three hour <%= w.temp_three %></li>
+            <li>temp in four hour <%= w.temp_four %></li>
+            <li>temp in five hour <%= w.temp_five %></li>
+            <li>weekly_summary: <%= w.weekly_summary %></li>
+            <li><%= link_to "Delete this weather notification", w, method: :delete , class: "lastele" %></li>
+        </div>
+    <% end %>
+</ul>

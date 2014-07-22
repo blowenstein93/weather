@@ -41,6 +41,8 @@ gem 'spring',        group: :development
 
 gem 'rake', '~> 10.3.2'
 
+gem "twilio-ruby"
+
 ruby '2.0.0'
 
 # Use ActiveModel has_secure_password

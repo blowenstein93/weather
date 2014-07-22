@@ -11,10 +11,18 @@
 
 <ul class="nav_bar">
     <li><%= link_to "Home", root_path, class: "link" %></li>
-    <li><%= link_to "New Lookup", new_weather_path, class: "link" %></li>
-</ul>
+    <li><%= link_to "Deprecate", new_weather_path, class: "link" %></li>
+    <li><%= link_to "New Account", new_user_path, class: "link" %></li>
+    <li><%= link_to "Sign-In", signin_path, class: "link" %></li>
 
-<%= yield %>
+</ul>
+<div class="content">
+    <%= yield %>
+</div>
+
+<ul class="footer">
+    <li>If you don't have an account yet, please sign up <%= link_to "here", new_user_path %></li>
+</ul>
 
 </body>
 </html>

@@ -15,3 +15,5 @@
     <li>temp in five hour <%= @weather.temp_five %></li>
     <li>weekly_summary: <%= @weather.weekly_summary %></li>
 </ul>
+
+<p><%= link_to "User Account", user_path(@weather.user_id), class: "link" %></p>

@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
+  resources :users
   root 'welcome#index'
   resources :weathers
+  get "signin" => "users#signin"
+  get "search" => "users#search"
+
+
+
+
+  # resources :sessions, only: [:new, :create, :destroy]
+
+  # match '/signin',  to: 'sessions#new',         via: 'get'
+  # match '/signout', to: 'sessions#destroy',     via: 'delete'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

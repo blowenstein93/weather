@@ -1,0 +1,13 @@
+<div class="forms">
+    <h2>Sign-In Below to See Your Notifications</h2>
+
+
+
+    <%= form_tag("/search", method: "get") do %>
+        <%= label_tag(:email, "Email:") %>
+        <%= text_field_tag(:email) %>
+        <div class="submiter">
+            <%= submit_tag("Submit") %>
+        </div>
+    <% end %>
+</div>

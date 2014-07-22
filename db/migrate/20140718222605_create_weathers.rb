@@ -16,6 +16,7 @@ class CreateWeathers < ActiveRecord::Migration
       t.float :temp_four
       t.float :temp_five
       t.string :weekly_summary
+      t.belongs_to :user
 
       t.timestamps
     end

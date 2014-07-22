@@ -3,6 +3,7 @@ require 'net/http'
 class Weather < ActiveRecord::Base
 
 validates :address, presence: true
+belongs_to :user
 
 
     def self.geocode(address)
@@ -19,6 +20,4 @@ validates :address, presence: true
         response = Net::HTTP.get_response(URI.parse(url))
         response.body
     end
-
-
 end
