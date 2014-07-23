@@ -1,0 +1,161 @@
+body{
+    background-color: #0B0B3B;
+    color:#FFF;
+    padding:0px;
+    margin:0px;
+}
+
+
+html{
+    background-color: #0B0B3B;
+    color:#FFF;
+    padding:0px;
+    margin:0px;
+}
+
+.nav_bar{
+    list-style-type: none;
+    position:fixed;
+    background-color:#63637A;
+    width:100%;
+    line-height:40px;
+    top:-20px;
+    left:0px;
+}
+
+.nav_bar li {
+    display:inline;
+    border:2px solid;
+    border-color:#6E6E6E;
+    padding-left:10px;
+    padding-right: 10px;
+    margin-left:20px;
+    background-color:#FFF;
+}
+.nav_bar li a{
+    color:#000;
+
+}
+.content{
+    margin-bottom:40px;
+    height:95%;
+    margin-top:50px;
+    margin-left:50px;
+}
+
+a{
+    text-decoration: none;
+    color:#848484;
+}
+
+.link {
+    color:#FFF;
+}
+
+.errors{
+    color:#F78181;
+}
+
+.userweathers{
+    border-top:2px solid;
+    border-bottom:2px solid;
+    list-style-type: none;
+    padding-bottom: 19px;
+}
+.userweathers li {
+    padding-left: 10px;
+    line-height: 26px
+}
+
+.userheader{
+    list-style-type: none
+}
+
+.lastele{
+    color:#F78181;
+    text-decoration: none
+}
+
+.userheader li{
+    display:inline;
+    padding-right:10px;
+    border-right:2px solid;
+}
+
+.welcome li{
+    list-style-type: none;
+}
+
+.usrindx li{
+    list-style-type: none;
+}
+.usrindx {
+    border-bottom:2px solid;
+    width: 100%;
+}
+
+.forms{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:15%;
+    line-height: 30px;
+    width:250px;
+    background-color: #6E6E6E;
+    padding-right:none;
+    padding-left:3%;
+}
+
+.submit{
+    border:none;
+    background-color: #FFF;
+    position:relative;
+    margin-left:30%;
+}
+.submiter input{
+    border:none;
+    background-color: #FFF;
+    position:relative;
+    margin-left:30%;
+}
+
+.footer{
+    position: fixed;
+    bottom:0px;
+    left:0px;
+    list-style-type: none;
+    border-top: 2px solid;
+    width: 100%;
+    background-color:#63637A;
+    border-color:#6E6E6E;
+    margin:0px;
+}
+.left{
+    float:left;
+    margin-left:20px;
+}
+.right{
+    float:right;
+    margin-right:20px;
+}
+
+.footer a{
+    color:#000;
+}
+.opthdr{
+    line-height: 20px
+}
+.options{
+    line-height: 20px;
+     margin-left:10px;
+}
+.about{
+    border:2px solid;
+    color:#000;
+    background-color:#63637A;
+    border-radius: 10px;
+    margin-top:40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 22px;
+    width:90%;
+}
