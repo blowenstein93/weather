@@ -1,3 +1,4 @@
+
 class WeathersController < ApplicationController
     def new
         @weather = Weather.new
@@ -25,6 +26,12 @@ class WeathersController < ApplicationController
             @weather.temp_five = json["hourly"]["data"][4]["apparentTemperature"]
             @weather.weekly_summary = json["daily"]["summary"]
 
+            @weather.rain_one = json["hourly"]["data"][0]["precipProbability"]
+            @weather.rain_four = json["hourly"]["data"][3]["precipProbability"]
+            @weather.rain_seven = json["hourly"]["data"][6]["precipProbability"]
+            @weather.rain_ten = json["hourly"]["data"][9]["precipProbability"]
+            @weather.rain_thirt = json["hourly"]["data"][12]["precipProbability"]
+
             @weather.save
             redirect_to(weather_path(@weather.id))
         else
@@ -47,10 +54,18 @@ class WeathersController < ApplicationController
     end
 
 
+    def text
+        if Weather.text(params[:id])
+            redirect_to root_path
+        else
+            redirect_to new_weathers_path
+        end
+    end
+
     private
 
     def weather_params
-        params.require(:weather).permit(:lat, :lng, :weather, :address, :temp, :precip_prob, :precip_amt, :humidity, :wind_speed, :temp_one, :temp_two, :temp_three, :temp_four, :temp_five, :weekly_summary, :user_id)
+        params.require(:weather).permit(:lat, :lng, :weather, :address, :temp, :precip_prob, :precip_amt, :humidity, :wind_speed, :temp_one, :temp_two, :temp_three, :temp_four, :temp_five, :weekly_summary, :user_id, :daily, :weekly, :rain, :temp_ntf, :rain_one, :rain_four, :rain_seven, :rain_ten, :rain_thirt)
     end
 
 end

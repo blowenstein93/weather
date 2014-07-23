@@ -47,6 +47,18 @@ class UsersController < ApplicationController
     redirect_to "/error"
   end
 
+  def daily_text
+    User.daily_text
+  end
+
+  def weekly_text
+    User.weekly_text
+  end
+
+  def rain_ntf
+    User.rain_ntf
+  end
+
   private
 
   def user_params

@@ -14,7 +14,24 @@
 
 
         <p>Address: <%= w.text_field :address %></p>
-        <p>User: <%= w.collection_select :user_id, User.all, :id, :name %></p>
+        <%= w.hidden_field :user_id, :value => params[:user_id] %>
+
+        <h4 class="opthdr">Options:</h4>
+
+        <p class="options">Daily weather texts <br> before you wake up?
+        <%= w.check_box :daily %></p>
+
+        <p class="options">Weekly weather texts <br> on Sunday nights?
+        <%= w.check_box :weekly %></p>
+
+
+        <p class="options">Weather alerts if it will <br> rain
+        in the next 2 hours?
+        <%= w.check_box :weekly %></p>
+
+
+
+
 
         <%= w.submit "Submit", class: "submit" %>
 

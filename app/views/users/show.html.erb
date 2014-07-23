@@ -1,9 +1,12 @@
+<h2>Welcome <%=@user.name %></h2>
 
 <ul class="userheader">
-    <li><h2>Welcome <%=@user.name %></h2></li>
+    <li>Phone: <%= @user.phone%></li>
+    <li>Email: <%= @user.email%></li>
     <li><%= link_to "new weather lookup", new_weather_path(@user.id), class: "link" %></li>
     <li><%= link_to "Delete this account and all associated notifications", @user, method: :delete, class: "link" %></li>
 </ul>
+
 <ul>
     <% @weathers.each do |w|%>
         <div class="userweathers">
@@ -21,6 +24,10 @@
             <li>temp in five hour <%= w.temp_five %></li>
             <li>weekly_summary: <%= w.weekly_summary %></li>
             <li><%= link_to "Delete this weather notification", w, method: :delete , class: "lastele" %></li>
+
+            <li><%= link_to "Send this notification now",
+            "/weathers-text/#{w.id}", method: :post, class: "lastele" %></li>
+
         </div>
     <% end %>
 </ul>

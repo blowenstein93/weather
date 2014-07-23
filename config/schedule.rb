@@ -20,6 +20,16 @@
 # Learn more: http://github.com/javan/whenever
 
 
-every 1.day, :at => "1:10 pm" do
-    runner "User.text"
+every 1.day, :at => "6:59 pm" do
+    runner "User.daily_text", :environment => "development"
+end
+
+
+every :sunday, :at => '6pm' do
+    runner "User.weekly_text", :environment => "development"
+end
+
+
+every 10.hours do
+    runner "User.rain_ntf", :environment => "development"
 end

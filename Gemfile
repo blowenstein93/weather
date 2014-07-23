@@ -7,7 +7,6 @@ gem 'rails', '4.1.4'
 
 group :production do
     gem 'pg'
-    gem 'rails_12factor'
 end
 
 group :development do
@@ -41,7 +40,9 @@ gem 'spring',        group: :development
 
 gem 'rake', '~> 10.3.2'
 
-gem "twilio-ruby"
+gem 'whenever'
+
+gem 'twilio-ruby'
 
 ruby '2.0.0'
 

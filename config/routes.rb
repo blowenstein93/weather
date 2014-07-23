@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get "signin" => "users#signin"
   get "search" => "users#search"
 
-
-
+  post "weathers-text/:id" => "weathers#text"
+  get "/bad_address" => "weather#bad_addr"
 
   # resources :sessions, only: [:new, :create, :destroy]
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140720192335) do
+ActiveRecord::Schema.define(version: 20140723003204) do
 
   create_table "users", force: true do |t|
     t.string   "name"
@@ -40,6 +40,15 @@ ActiveRecord::Schema.define(version: 20140720192335) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.boolean  "daily"
+    t.boolean  "weekly"
+    t.boolean  "rain"
+    t.boolean  "temp_ntf"
+    t.float    "rain_one"
+    t.float    "rain_four"
+    t.float    "rain_seven"
+    t.float    "rain_ten"
+    t.float    "rain_thirt"
   end
 
 end
