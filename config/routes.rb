@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :users, only: [:new, :show]
   root 'welcome#index'
-  resources :weathers
+  resources :weathers, only: [:new, :show]
   get "signin" => "users#signin"
   get "search" => "users#search"
 
