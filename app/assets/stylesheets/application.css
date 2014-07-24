@@ -79,7 +79,8 @@ a{
 .userheader li{
     display:inline;
     padding-right:10px;
-    border-right:2px solid;
+    padding-left:10px;
+    border-right:10px double;
 }
 
 .welcome li{
@@ -160,7 +161,6 @@ a{
     width:90%;
 }
 
-
 .hide{
-    display: none;
+    visibility:hidden;
 }

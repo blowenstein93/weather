@@ -3,7 +3,7 @@
 <ul class="userheader">
     <li>Phone: <%= @user.phone%></li>
     <li>Email: <%= @user.email%></li>
-    <li><%= link_to "new weather lookup", new_weather_path(@user.id), class: "link" %></li>
+    <li><%= link_to "new weather lookup", new_weather_path(:id => @user.id), class: "link" %></li>
     <li><%= link_to "Delete this account and all associated notifications", @user, method: :delete, class: "link" %></li>
 </ul>
 
