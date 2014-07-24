@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   post "weathers-text/:id" => "weathers#text"
   get "/bad_address" => "weather#bad_addr"
 
+
   # resources :sessions, only: [:new, :create, :destroy]
 
   # match '/signin',  to: 'sessions#new',         via: 'get'
