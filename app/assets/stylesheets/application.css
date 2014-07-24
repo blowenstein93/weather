@@ -1,16 +1,18 @@
 body{
-    background-color: #0B0B3B;
     color:#FFF;
     padding:0px;
     margin:0px;
 }
 
-
 html{
-    background-color: #0B0B3B;
     color:#FFF;
     padding:0px;
     margin:0px;
+    background: url("rainy.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .nav_bar{
@@ -22,6 +24,7 @@ html{
     top:-20px;
     left:0px;
 }
+
 
 .nav_bar li {
     display:inline;
@@ -41,6 +44,8 @@ html{
     height:95%;
     margin-top:50px;
     margin-left:50px;
+    z-index: 10;
+    overflow:scroll;
 }
 
 a{

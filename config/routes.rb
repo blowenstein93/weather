@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users, only: [:new, :show]
+  resources :users, only: [:new, :create, :show]
   root 'welcome#index'
   resources :weathers, only: [:new, :show]
   get "signin" => "users#signin"

@@ -1,5 +1,4 @@
 <h2>Welcome Home</h2>
-
 <ul class="welcome">
     <li><%= link_to "New Account", new_user_path, class: "link" %></li>
     <li><%= link_to "Sign-In", signin_path, class: "link" %></li>
@@ -12,10 +11,7 @@
     when there's any significant changes in temperature or a chance
     of rain in a few hours.
     <br>
-    <br>
-    Weather Alert works by using google's geocoding api in conjunction
-    darksky's weather api to get the weather data. Finally, the text messages
-    are sent using twilio's texting api and the whenever gem to
-    schedule crontab's.
+    Weather Alert utilizes <a class="link" href="https://developers.google.com/maps/documentation/geocoding/">google's geocoding api</a> in conjunction with <a href="https://developer.forecast.io/docs" class="link">darksky's weather api </a>to get the weather data. The text messages are sent using <a href="https://www.twilio.com/" class="link">twilio's texting api </a> and the <a href="https://github.com/javan/whenever" class="link"> whenever gem</a> to schedule the texts.
     </p>
 </div>
+
