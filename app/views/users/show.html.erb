@@ -13,16 +13,16 @@
             <h4>Weather for <%= w.address %></h4>
             <li>Forecast - <%= w.weather %></li>
             <li>Temp: <%= w.temp %></li>
-            <li>precip_prob: <%= w.precip_prb %></li>
-            <li>precip_amt: <%= w.precip_amt %></li>
-            <li>humidity: <%= w.humidity %></li>
-            <li>wind_speed: <%= w.wind_speed %></li>
-            <li>temp in one hour: <%= w.temp_one %></li>
-            <li>temp in two hour <%= w.temp_two %></li>
-            <li>temp in three hour <%= w.temp_three %></li>
-            <li>temp in four hour <%= w.temp_four %></li>
-            <li>temp in five hour <%= w.temp_five %></li>
-            <li>weekly_summary: <%= w.weekly_summary %></li>
+            <li>Precip probability: <%= w.precip_prb %></li>
+            <li>Precipitation amount: <%= w.precip_amt %></li>
+            <li>Humidity: <%= w.humidity %></li>
+            <li>Wind speed: <%= w.wind_speed %></li>
+            <li>Temp in one hour: <%= w.temp_one %></li>
+            <li>Temp in two hour <%= w.temp_two %></li>
+            <li>Temp in three hour <%= w.temp_three %></li>
+            <li>Temp in four hour <%= w.temp_four %></li>
+            <li>Temp in five hour <%= w.temp_five %></li>
+            <li>Weekly summary: <%= w.weekly_summary %></li>
             <li><%= link_to "Delete this weather notification", w, method: :delete , class: "lastele" %></li>
 
             <li><%= link_to "Send this notification now",
