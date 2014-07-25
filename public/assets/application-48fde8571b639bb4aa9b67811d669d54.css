@@ -1,16 +1,18 @@
 body{
-    background-color: #0B0B3B;
     color:#FFF;
     padding:0px;
     margin:0px;
 }
 
-
 html{
-    background-color: #0B0B3B;
     color:#FFF;
     padding:0px;
     margin:0px;
+    background: url("rainy.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .nav_bar{
@@ -22,6 +24,7 @@ html{
     top:-20px;
     left:0px;
 }
+
 
 .nav_bar li {
     display:inline;
@@ -41,6 +44,8 @@ html{
     height:95%;
     margin-top:50px;
     margin-left:50px;
+    z-index: 10;
+    overflow:scroll;
 }
 
 a{
@@ -79,7 +84,8 @@ a{
 .userheader li{
     display:inline;
     padding-right:10px;
-    border-right:2px solid;
+    padding-left:10px;
+    border-right:10px double;
 }
 
 .welcome li{
@@ -150,7 +156,7 @@ a{
 }
 .about{
     border:2px solid;
-    color:#000;
+    color:#CCC;
     background-color:#63637A;
     border-radius: 10px;
     margin-top:40px;
@@ -158,4 +164,8 @@ a{
     padding-right: 20px;
     line-height: 22px;
     width:90%;
+}
+
+.hide{
+    visibility:hidden;
 }
