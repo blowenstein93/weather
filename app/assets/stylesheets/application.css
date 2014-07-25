@@ -109,6 +109,9 @@ a{
     background-color: #6E6E6E;
     padding-right:none;
     padding-left:3%;
+    border-radius:10px;
+    padding-top:3px;
+    padding-bottom:10px;
 }
 
 .submit{
@@ -156,7 +159,7 @@ a{
 }
 .about{
     border:2px solid;
-    color:#CCC;
+    color:#FFF;
     background-color:#63637A;
     border-radius: 10px;
     margin-top:40px;
