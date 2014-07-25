@@ -18,7 +18,6 @@ html{
 .nav_bar{
     list-style-type: none;
     position:fixed;
-    background-color:#63637A;
     width:100%;
     line-height:40px;
     top:-20px;
@@ -28,8 +27,8 @@ html{
 
 .nav_bar li {
     display:inline;
-    border:2px solid;
     border-color:#6E6E6E;
+    border-radius:6px;
     padding-left:10px;
     padding-right: 10px;
     margin-left:20px;
@@ -55,6 +54,9 @@ a{
 
 .link {
     color:#FFF;
+}
+.linkblack{
+    color:#000;
 }
 
 .errors{
