@@ -22,11 +22,13 @@ html{
     line-height:40px;
     top:-20px;
     left:0px;
+    background-color: rgba(99,99,122,1);
 }
 
 
 .nav_bar li {
     display:inline;
+    opacity: 1;
     border-color:#6E6E6E;
     border-radius:6px;
     padding-left:10px;
