@@ -17,29 +17,32 @@ html{
 
 .nav_bar{
     list-style-type: none;
+    padding-top:30px;
     position:fixed;
     width:100%;
     line-height:40px;
     top:-20px;
     left:0px;
-    background-color: rgba(99,99,122,1);
+    /*background-color: rgba(99,99,122,1);*/
 }
 
-
-.nav_bar li {
-    display:inline;
-    opacity: 1;
-    border-color:#6E6E6E;
-    border-radius:6px;
-    padding-left:10px;
-    padding-right: 10px;
-    margin-left:20px;
-    background-color:#FFF;
+.nav_first{
+    font-size:30px;
+    list-style-type: none;
 }
-.nav_bar li a{
-    color:#000;
-
+.nav_el{
+    list-style-type: none;
+    line-height:24px;
+    margin-top:10px;
 }
+.nav_left .nav_el{
+    margin-left:25px;
+}
+
+.nav_right .nav_el{
+    margin-right:25px;
+}
+
 .content{
     margin-bottom:40px;
     height:95%;
@@ -47,7 +50,40 @@ html{
     margin-left:50px;
     z-index: 10;
     overflow:scroll;
+    padding-top:50px;
 }
+
+.front{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+
+#light{
+    font-weight:100;
+}
+
+#heavy{
+    font-weight:900;
+    font-size:22px;
+}
+
+#problem{
+    display:block;
+}
+#prob_text{
+    display:block;
+    float:left;
+
+}
+
+#phone{
+    display:block;
+    padding-left:200px;
+    vertical-align: text-top;
+}
+
 
 a{
     text-decoration: none;
@@ -57,6 +93,7 @@ a{
 .link {
     color:#FFF;
 }
+
 .linkblack{
     color:#000;
 }
@@ -64,6 +101,8 @@ a{
 .errors{
     color:#F78181;
 }
+
+
 
 .userweathers{
     border-top:2px solid;
@@ -124,6 +163,7 @@ a{
     position:relative;
     margin-left:30%;
 }
+
 .submiter input{
     border:none;
     background-color: #FFF;
@@ -142,13 +182,16 @@ a{
     border-color:#6E6E6E;
     margin:0px;
 }
+.footer p {
+    margin-left:20px;
+    margin-right:20px;
+}
+
 .left{
     float:left;
-    margin-left:20px;
 }
 .right{
     float:right;
-    margin-right:20px;
 }
 
 .footer a{

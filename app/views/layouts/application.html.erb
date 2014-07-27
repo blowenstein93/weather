@@ -9,12 +9,18 @@
 </head>
 <body>
 
-<ul class="nav_bar">
-    <li class="nav_el"><%= link_to "Home", root_path, class: "link" %></li>
-    <li class="nav_el"><%= link_to "New Account", new_user_path, class: "link" %></li>
-    <li class="nav_el"><%= link_to "About", welcome_about_path, class: "link" %></li>
-    <li class="nav_el"><%= link_to "Sign-In", signin_path, class: "link" %></li>
-</ul>
+<div class="nav_bar">
+  <ul class="nav_left">
+      <li class="nav_first left">WeatherAlert</li>
+      <li class="nav_el left"><%= link_to "Home", root_path, class: "link" %></li>
+      <li class="nav_el left"><%= link_to "About", welcome_about_path, class: "link" %></li>
+  </ul>
+  <ul class="nav_right">
+      <li class="nav_el right"><%= link_to "New Account", new_user_path, class: "link" %></li>
+      <li class="nav_el right"><%= link_to "Sign-In", signin_path, class: "link" %></li>
+  </ul>
+</div>
+
 
 <div class="content">
     <%= yield %>

@@ -17,7 +17,7 @@
 
 
 function hide_signin(){
-    var ele = document.getElementsByTagName("li")[3];
+    var ele = document.getElementsByTagName("li")[4];
         if (ele.className.indexOf("hide") == -1) {
             ele.className =  "hide";
         } else if (ele.className.indexOf("hide") > -1) {
@@ -35,10 +35,10 @@ $(document).ready(function(){
 
 var fade = function(node) {
     var level = 1;
-    var opacity = 1.0;
+    var opacity = 0;
     var step = function(){
         var hex = level.toString(16);
-        opacity -= 0.05;
+        opacity += 0.05;
         node.style.backgroundColor = "rgba(99, 99, 122, " + opacity + ")";
 
         if (level < 20) {
@@ -58,12 +58,14 @@ var hover = function(node_set){
             return function() {
                 console.log("on" + node_set[i])
                 node_set[i].style.backgroundColor = "#6E6E6E";
+                node_set[i].style.borderRadius = "5px";
+
             };
         }(i);
         node_set[i].onmouseout = function(i){
             return function() {
                 console.log("off" + node_set[i])
-                node_set[i].style.backgroundColor = "#FFF";
+                node_set[i].style.backgroundColor = "";
             };
         }(i);
     }

@@ -1,8 +1,16 @@
-<h2>Welcome Home</h2>
-<ul class="welcome">
-    <li><%= link_to "New Account", new_user_path, class: "link" %></li>
-    <li><%= link_to "Sign-In", signin_path, class: "link" %></li>
-</ul>
+
+<div class="front">
+    <h3 id="light">Stop worrying about the weather</h3>
+    <h3 id="heavy">Always be in the know with WeatherAlert</h3>
+</div>
 
 
-
+<div id="problem">
+    <div id="prob_text">
+        <h3>We check our phones at least once a day</h3>
+        <p>For the forgetful among us, it can be more</p>
+    </div>
+    <div id="phone">
+        <%= image_tag("phone.jpg") %>
+    </div>
+</div>
