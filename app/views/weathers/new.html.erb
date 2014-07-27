@@ -1,5 +1,7 @@
+<h2 class="new_accnt">New Weather Lookup</h2>
+
+
 <div class="forms">
-    <h2>New Weather Lookup</h2>
     <%= form_for @weather do |w| %>
         <div class="errors">
             <% if @weather.errors.any? %>
@@ -12,24 +14,21 @@
             <% end %>
         </div>
 
+        <div class="field">
 
         <p>Address: <%= w.text_field :address %></p>
         <%= w.hidden_field :user_id, :value => params[:id] %>
 
         <h4 class="opthdr">Options:</h4>
 
-        <p class="options">Daily weather texts <br> before you wake up?
-        <%= w.check_box :daily %></p>
+        <p class="options"><%= w.check_box :daily %>Daily weather texts before you wake up?</p>
 
-        <p class="options">Weekly weather texts <br> on Sunday nights?
-        <%= w.check_box :weekly %></p>
+        <p class="options"><%= w.check_box :weekly %>Weekly weather texts on Sunday nights?</p>
 
 
-        <p class="options">Weather alerts if it will <br> rain
-        in the next 2 hours?
-        <%= w.check_box :weekly %></p>
-
-
+        <p class="options"><%= w.check_box :weekly %>Weather alerts if it will rain
+        in the next 2 hours?</p>
+</div>
 
 
 

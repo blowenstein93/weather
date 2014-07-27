@@ -1,38 +1,42 @@
-<h2>Weather for <%= @weather.address%></h2>
-<p><%= link_to "Click here to go back to your account", user_path(@weather.user_id), class: "link" %></p>
+<h2 class="new_accnt">Weather for <%= @weather.address%></h2>
+
+<div class="show">
+    <p><%= link_to "Click here to go back to your account", user_path(@weather.user_id), class: "link" %></p>
 
 
-<p>Lat <%= @weather.lat %></p>
-<p>Lng <%= @weather.lng %></p>
+    <p>Lat <%= @weather.lat %></p>
+    <p>Lng <%= @weather.lng %></p>
 
-<p>This location is signed-up for the following notifications</p>
-<ul>
-    <% if @weather.daily %>
-        <li>daily</li>
-    <% end %>
-    <% if @weather.weekly %>
-        <li>weekly</li>
-    <% end %>
-    <% if @weather.temp_ntf %>
-        <li>temperature</li>
-    <% end %>
-    <% if @weather.rain %>
-        <li>rain</li>
-    <% end %>
-</ul>
+    <p>This location is signed-up for the following notifications</p>
+    <ul>
+        <% if @weather.daily %>
+            <li>daily</li>
+        <% end %>
+        <% if @weather.weekly %>
+            <li>weekly</li>
+        <% end %>
+        <% if @weather.temp_ntf %>
+            <li>temperature</li>
+        <% end %>
+        <% if @weather.rain %>
+            <li>rain</li>
+        <% end %>
+    </ul>
 
-<h4>And here's your forecast</h4>
-<ul>
-    <li>Forecast - <%= @weather.weather %></li>
-    <li>Temp: <%= @weather.temp %></li>
-    <li>precip_prob: <%= @weather.precip_prb %></li>
-    <li>precip_amt: <%= @weather.precip_amt %></li>
-    <li>humidity: <%= @weather.humidity %></li>
-    <li>wind_speed: <%= @weather.wind_speed %></li>
-    <li>temp in one hour: <%= @weather.temp_one %></li>
-    <li>temp in two hour <%= @weather.temp_two %></li>
-    <li>temp in three hour <%= @weather.temp_three %></li>
-    <li>temp in four hour <%= @weather.temp_four %></li>
-    <li>temp in five hour <%= @weather.temp_five %></li>
-    <li>weekly_summary: <%= @weather.weekly_summary %></li>
-</ul>
+<hr>
+    <h4>And here's your forecast</h4>
+    <ul class="forecast">
+        <li>Forecast: <%= @weather.weather %></li>
+        <li>Temperature (F): <%= @weather.temp %></li>
+        <li>Probability of Precipitation: <%= @weather.precip_prb %></li>
+        <li>Amount of Precipitation: <%= @weather.precip_amt %></li>
+        <li>Humidity: <%= @weather.humidity %></li>
+        <li>Wind speed: <%= @weather.wind_speed %></li>
+        <li>Temp in one hour: <%= @weather.temp_one %></li>
+        <li>Temp in two hours: <%= @weather.temp_two %></li>
+        <li>Temp in three hours: <%= @weather.temp_three %></li>
+        <li>Temp in four hours: <%= @weather.temp_four %></li>
+        <li>Temp in five hours: <%= @weather.temp_five %></li>
+        <li>weekly_summary: <%= @weather.weekly_summary %></li>
+    </ul>
+</div>

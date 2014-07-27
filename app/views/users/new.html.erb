@@ -1,5 +1,6 @@
+<h2 class="new_accnt">Create a new account </h2>
+
 <div class="forms">
-    <h2>Create a new account </h2>
 
     <%= form_for @user do |u|%>
         <% if @user.errors.any? %>
@@ -11,17 +12,21 @@
             </ul>
         <% end%>
         <div class="input">
-            <%= u.label :name %>
+            <%= u.label :name %><br>
             <%= u.text_field :name %>
         </div>
         <div class="input">
-            <%= u.label :email %>
+            <%= u.label :email %><br>
             <%= u.text_field :email %>
         </div>
         <div class="input">
-            <%= u.label :phone %>
+            <%= u.label :phone %><br>
             <%= u.number_field :phone %>
         </div>
             <%= u.submit 'Submit', class: "submit" %>
     <% end %>
 </div>
+
+<p class='center helper'>We need your email so you can login and phone so we can text you
+the weather of course. We promise not to spam you and you can
+easily opt out of notifications at any time.</p>

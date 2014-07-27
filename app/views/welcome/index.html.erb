@@ -1,16 +1,46 @@
 
 <div class="front">
-    <h3 id="light">Stop worrying about the weather</h3>
     <h3 id="heavy">Always be in the know with WeatherAlert</h3>
+    <h3 id="light">Stop worrying about the weather</h3>
+    <%= image_tag("storm.png", class: "storm") %>
+</div>
+
+<div class="explain">
+    <div class="expl_left">
+        <%= image_tag("rain.png") %>
+    </div>
+    <div class="expl_right">
+        <h3>Nobody wants to get caught in the rain...</h3>
+    </div>
 </div>
 
 
-<div id="problem">
-    <div id="prob_text">
-        <h3>We check our phones at least once a day</h3>
-        <p>For the forgetful among us, it can be more</p>
+<hr>
+
+<div class="explain">
+    <div class="expl_left">
+        <h3>So we check the weather at least once a day</h3>
+        <p>Sometimes more</p>
     </div>
-    <div id="phone">
+    <div class="expl_right">
         <%= image_tag("phone.jpg") %>
     </div>
+</div>
+
+<hr>
+
+<div class="explain">
+    <div class="expl_left">
+        <%= image_tag("question.png") %>
+    </div>
+    <div class="expl_right">
+        <h3>But what if we didn't have to?</h3>
+    </div>
+</div>
+
+<hr>
+
+<div class="center explain">
+    <h2 class"center">WeatherAlert will text you if there's <br> weather you should know about</h2>
+    <%= button_to "Sign-Up", new_user_path, method: "get", class: "action" %>
 </div>

@@ -15,32 +15,13 @@
 //= require turbolinks
 //= require_tree .
 
-
-function hide_signin(){
-    var ele = document.getElementsByTagName("li")[4];
-        if (ele.className.indexOf("hide") == -1) {
-            ele.className =  "hide";
-        } else if (ele.className.indexOf("hide") > -1) {
-            ele.className = "link"
-        }
-
-
-}
-
-$(document).ready(function(){
-    if (window.location.pathname.indexOf("users") || window.location.pathname.indexOf("weathers/new")) {
-        hide_signin();
-    }
-});
-
 var fade = function(node) {
     var level = 1;
     var opacity = 0;
     var step = function(){
         var hex = level.toString(16);
         opacity += 0.05;
-        node.style.backgroundColor = "rgba(99, 99, 122, " + opacity + ")";
-
+        node.style.backgroundColor = "rgba(226, 60, 60, " + opacity + ")";
         if (level < 20) {
             level += 1;
             setTimeout(step, 50);
@@ -48,6 +29,7 @@ var fade = function(node) {
     };
     setTimeout(step, 100);
 }
+
 
 
 var hover = function(node_set){
@@ -59,6 +41,7 @@ var hover = function(node_set){
                 console.log("on" + node_set[i])
                 node_set[i].style.backgroundColor = "#6E6E6E";
                 node_set[i].style.borderRadius = "5px";
+                node_set[i].style.padding = "0px 5px 0px 5px";
 
             };
         }(i);
@@ -66,12 +49,37 @@ var hover = function(node_set){
             return function() {
                 console.log("off" + node_set[i])
                 node_set[i].style.backgroundColor = "";
+                node_set[i].style.padding = "0px 0px 0px 0px";
+
             };
         }(i);
     }
 }
 
+
+var text = function(node){
+    var level = 0;
+    var times = 2;
+    var sayings = ["Stop worrying about the weather", "Stop worrying about the future", "Stop checking your phone", "Be in the moment"];
+    var loop = function(){
+        node.innerHTML = sayings[level];
+        if (level < 3) {
+            level += 1;
+            setTimeout(loop, 1500);
+        } else {
+            level = 0;
+            times -= 1;
+            if (times !== 0) {
+                setTimeout(loop, 1500);
+            }
+        }
+    }
+    setTimeout(loop, 100);
+}
+
+
 window.onload = function() {
     fade(document.getElementsByClassName("nav_bar")[0]);
     hover(document.getElementsByClassName("nav_el"));
+    text(document.getElementById("light"));
 }
