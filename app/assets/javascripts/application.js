@@ -38,19 +38,12 @@ var hover = function(node_set){
     for (i =0; i < length; i++){
         node_set[i].onmouseover = function(i){
             return function() {
-                console.log("on" + node_set[i])
-                node_set[i].style.backgroundColor = "#6E6E6E";
-                node_set[i].style.borderRadius = "5px";
-                node_set[i].style.padding = "0px 5px 0px 5px";
-
+                node_set[i].style.fontWeight = "900";
             };
         }(i);
         node_set[i].onmouseout = function(i){
             return function() {
-                console.log("off" + node_set[i])
-                node_set[i].style.backgroundColor = "";
-                node_set[i].style.padding = "0px 0px 0px 0px";
-
+                node_set[i].style.fontWeight = "normal";
             };
         }(i);
     }
@@ -77,9 +70,11 @@ var text = function(node){
     setTimeout(loop, 100);
 }
 
-
-window.onload = function() {
+$(document).on('page:change', function() {
     fade(document.getElementsByClassName("nav_bar")[0]);
     hover(document.getElementsByClassName("nav_el"));
-    text(document.getElementById("light"));
-}
+    hover(document.getElementsByClassName("action"));
+    if (document.getElementById("light") !== null) {
+        text(document.getElementById("light"));
+    }
+});

@@ -55,10 +55,11 @@ class WeathersController < ApplicationController
 
 
     def text
+        puts "--------------called text"
         if Weather.text(params[:id])
-            redirect_to root_path
+            redirect_to :back
         else
-            redirect_to new_weathers_path
+            redirect_to root_path
         end
     end
 
@@ -67,5 +68,4 @@ class WeathersController < ApplicationController
     def weather_params
         params.require(:weather).permit(:lat, :lng, :weather, :address, :temp, :precip_prob, :precip_amt, :humidity, :wind_speed, :temp_one, :temp_two, :temp_three, :temp_four, :temp_five, :weekly_summary, :user_id, :daily, :weekly, :rain, :temp_ntf, :rain_one, :rain_four, :rain_seven, :rain_ten, :rain_thirt)
     end
-
 end

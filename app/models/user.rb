@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
                 if forecast.weekly
                     msg = "Today it's going to be #{forecast.weather}"
                     if forecast.precip_prb > 0.5
-                        msg = msg + ". It's probably going to rain #{forecast.precip_amt} with probability #{forecast.precip_prb}"
+                        msg = msg + ". It's probably going to rain #{forecast.precip_amt} with probability #{forecast.precip_prb * 100}%"
                     else
                         msg = msg + ". It's not going to rain"
                     end

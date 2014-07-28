@@ -25,18 +25,23 @@ belongs_to :user
 
 
     def self.text(id)
-        client = Twilio::REST::Client.new("AC35d0abacd00f2ffcc065ca1d53c8b930", "0b1863df59c77930f6d4a12352be5679")
+        account_sid = "AC35d0abacd00f2ffcc065ca1d53c8b930"
+        auth = "0b1863df59c77930f6d4a12352be5679"
         weather = Weather.find(id)
         user = User.find(weather.user_id)
         phone = user.phone.to_i
         begin
-            client.account.messages.create({
-                :from => +9147757419,
+            client = Twilio::REST::Client.new(account_sid, auth)
+            response = client.account.messages.create( {
+                :body => "The weather outside is " + weather.weather + " -sent from WeatherAlert",
                 :to => phone,
-                :body => weather.weather
+                :from => "+19147757419",
             })
+
+            puts response.body
         rescue Twilio::REST::RequestError => e
-            return e
+            puts e.message
+            return false
         end
         return true
     end
