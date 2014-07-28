@@ -1,0 +1,299 @@
+body{
+    color:#000;
+    padding:0px;
+    margin:0px;
+}
+
+html{
+    color:#FFF;
+    padding:0px;
+    background-color:#E6E6E6;
+    margin:0px;
+    font-family: 'MavenPro-300';
+}
+
+.nav_bar{
+    list-style-type: none;
+    padding-top:25px;
+    padding-bottom:25px;
+    position:fixed;
+    width:100%;
+    top:-20px;
+    left:0px;
+    background-color: rgb(226, 60, 60, 1);
+}
+
+.nav_first{
+    font-size:30px;
+    list-style-type: none;
+}
+.nav_el{
+    list-style-type: none;
+    line-height:24px;
+    margin-top:10px;
+}
+.nav_left .nav_el{
+    margin-left:25px;
+}
+.nav_right .nav_el{
+    margin-right:25px;
+}
+
+.content{
+    margin-bottom:40px;
+    min-height:500px;
+    z-index: 10;
+    background-color:#E6E6E6;
+}
+
+
+.front{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    background-color:#E6E6E6;
+    padding-top:100px;
+}
+
+#light{
+    font-weight:100;
+}
+
+#heavy{
+    font-weight:900;r
+    font-size:22px;
+}
+
+
+hr {
+    width:100%;
+    background: linear-gradient( to right, #CCC, #828282, #CCC);
+    height:2px;
+    margin-left:auto;
+    margin-right:auto;
+    border:none;
+    margin-top:0;
+    margin-bottom: 0;
+}
+
+.explain{
+    background-color:#CCC;
+    height:325px;
+    margin:0;
+    display:block;
+    overflow: hidden;
+}
+
+.expl_left{
+    display:block;
+    float:left;
+    padding-left:125px;
+    padding-top: 50px;
+    margin:0;
+    height:inherit;
+}
+
+.expl_right{
+    display:block;
+    float:right;
+    padding-right:200px;
+    vertical-align: middle;
+    padding-top: 20px;
+    margin:0;
+    height:inherit;
+}
+
+.expl_right h3 {
+    padding-top: 80px;
+}
+
+.center{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    margin-top:0;
+    text-align: center;
+}
+
+
+.action{
+    border:none;
+    background-color:#f2292c;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    font-size:30px;
+    margin-top:80px;
+    margin-bottom:80px;
+}
+
+a{
+    text-decoration: none;
+    color:#848484;
+}
+
+.link {
+    color:#000;
+}
+
+.linkblack{
+    color:#000;
+}
+
+.errors{
+    color:#F78181;
+}
+
+.userweathers{
+    list-style-type: none;
+    padding-bottom: 19px;
+}
+.userweathers li {
+    padding-left: 10px;
+    line-height: 26px
+}
+
+.userheader{
+    list-style-type: none;
+    width:100%;
+    margin-top:50px;
+}
+.userheader .link{
+    float:right;
+    margin-right:50px;
+}
+
+.lastele{
+    color:#F78181;
+    text-decoration: none;
+    list-style-type: none;
+    line-height: 26px;
+}
+
+.userheader li{
+    display:inline;
+    padding-right:10px;
+    padding-left:10px;
+}
+
+.usrindx li{
+    list-style-type: none;
+}
+.usrindx {
+    border-bottom:2px solid;
+    width: 100%;
+}
+
+.new_accnt{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    padding-top:100px;
+    }
+
+.forms{
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    width:25%;
+    background-color: #CCC;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left:0;
+    padding-right:0;
+}
+
+.input{
+    margin-left:25%;
+}
+.input input{
+    width:60%;
+}
+
+.helper{
+    margin-top:20px;
+    width:45%;
+}
+
+.submit{
+    border:none;
+    background-color: #FFF;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+}
+
+.submiter input{
+    border:none;
+    background-color: #FFF;
+    position:relative;
+    margin-left:30%;
+}
+
+.field{
+    width:75%;
+    margin-left:15%;
+    margin-right:auto;
+}
+
+
+
+.footer{
+    position: fixed;
+    bottom:0px;
+    left:0px;
+    list-style-type: none;
+    border-top: 2px solid;
+    width: 100%;
+    background-color: rgb(119,118,118);
+    border-color:#6E6E6E;
+    margin:0px;
+}
+.footer p {
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+
+.footer a{
+    color:#000;
+}
+.opthdr{
+    line-height: 20px
+}
+.options{
+    line-height: 20px;
+     margin-left:10px;
+}
+.about{
+    padding-top:100px;
+    padding-left:75px;
+    padding-right:125px;
+}
+
+.about h3{
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.show{
+    margin-left:5%;
+}
+
+.forecast li{
+    list-style-type: none;
+}
+
+.hide{
+    visibility:hidden;
+}
