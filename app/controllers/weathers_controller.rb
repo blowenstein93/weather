@@ -50,7 +50,7 @@ class WeathersController < ApplicationController
     def destroy
         weather = Weather.find(params[:id])
         weather.destroy
-        redirect_to root_path
+        redirect_to :back
     end
 
 
