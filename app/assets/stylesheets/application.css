@@ -170,6 +170,8 @@ a{
     text-decoration: none;
     list-style-type: none;
     line-height: 26px;
+    float:right;
+    margin-right:40px;
 }
 
 .userheader li{
