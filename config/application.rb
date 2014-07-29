@@ -20,7 +20,10 @@ module WeatherAlert
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-
+    config.assets.precompile += [
+        "application.css",
+        "application.js"
+    ]
     config.serve_static_assets = true
 
   end
