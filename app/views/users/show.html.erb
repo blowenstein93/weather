@@ -11,19 +11,8 @@
     <% @weathers.each do |w|%>
         <div class="userweathers">
         <hr>
-            <h4>Weather for <%= w.address %></h4>
-            <li>Forecast: <%= w.weather %></li>
-            <li>Temperature (F): - <%= w.temp %></li>
-            <li>Probability of Precipitation: <%= w.precip_prb %></li>
-            <li>Amount of Precipitation: <%= w.precip_amt %></li>
-            <li>Humidity: <%= w.humidity %></li>
-            <li>Wind speed: <%= w.wind_speed %></li>
-            <li>Temp in one hour: <%= w.temp_one %></li>
-            <li>Temp in two hour: <%= w.temp_two %></li>
-            <li>Temp in three hour: <%= w.temp_three %></li>
-            <li>Temp in four hour: <%= w.temp_four %></li>
-            <li>Temp in five hour: <%= w.temp_five %></li>
-            <li>Weekly summary: <%= w.weekly_summary %></li>
+            <h4>Weather for <%= link_to w.address, weather_path(w.id), class: "link" %></h4>
+             <IFRAME src=<%= "http://forecast.io/embed/#lat=#{w.lat}&lon=#{w.lng}&name=#{w.address}" %> id="forecast_embed" type="text/html" frameborder="0" height="245"></IFRAME>
             <li><%= link_to "Delete this weather notification", w, method: :delete , class: "lastele" %></li>
 
             <li><%= link_to "Send this notification now",
