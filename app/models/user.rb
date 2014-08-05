@@ -15,13 +15,13 @@ class User < ActiveRecord::Base
             @weathers = Weather.where(user_id: user.id)
             @weathers.each do |forecast|
                 if forecast.weekly
-                    msg = "Today it's going to be #{forecast.weather}"
+                    msg = "Summary: #{forecast.weather}"
                     if forecast.precip_prb > 0.5
-                        msg = msg + ". It's probably going to rain #{forecast.precip_amt} with probability #{forecast.precip_prb * 100}%"
+                        msg = msg + ". \nIt's probably going to rain #{forecast.precip_amt} with probability #{forecast.precip_prb * 100}%"
                     else
-                        msg = msg + ". It's not going to rain"
+                        msg = msg + ".\n It's not going to rain"
                     end
-                    msg = msg + ". There's #{forecast.humidity * 100}% humidity. Right now it's #{forecast.temp.round} degrees, and in 5 hours it'll be #{forecast.temp_five.round}"
+                    msg = msg + ".\nHumidity: #{forecast.humidity * 100}%. \nCurrent Temp: #{forecast.temp.round} \nTemp in 5 hours: #{forecast.temp_five.round} \n-Your friends at WeatherAlert"
                     begin
                         @client.account.messages.create({
                             :from => 9147757419,
@@ -80,6 +80,7 @@ class User < ActiveRecord::Base
                 when forecast.rain_thirt > 0.5
                     msg = msg + "in thirteen hours. I'll remind you again later. "
                 end
+                msg = msg+"\n-Your friends at WeatherAlert"
                 begin
                     @client.account.messages.create({
                         :from => +9147757419,

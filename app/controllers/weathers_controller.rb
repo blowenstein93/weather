@@ -55,7 +55,6 @@ class WeathersController < ApplicationController
 
 
     def text
-        puts "--------------called text"
         if Weather.text(params[:id])
             redirect_to :back
         else

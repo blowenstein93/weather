@@ -33,7 +33,7 @@ belongs_to :user
         begin
             client = Twilio::REST::Client.new(account_sid, auth)
             response = client.account.messages.create( {
-                :body => "The weather outside is " + weather.weather + " -sent from WeatherAlert",
+                :body => "The weather outside is " + weather.weather + ". This was a test message sent from WeatherAlert",
                 :to => phone,
                 :from => "+19147757419",
             })

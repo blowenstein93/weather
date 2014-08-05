@@ -1,3 +1,5 @@
+require 'rufus-scheduler'
+
 class UsersController < ApplicationController
   def new
     @user = User.new
@@ -48,7 +50,10 @@ class UsersController < ApplicationController
   end
 
   def daily_text
-    User.daily_text
+     job_id =
+      Rufus::Scheduler.singleton.every '10m' do
+        User.daily_text
+      end
   end
 
   def weekly_text
