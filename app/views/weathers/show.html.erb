@@ -25,14 +25,12 @@
 
 <hr>
 
-    <IFRAME src=<%= "http://forecast.io/embed/#lat=#{@weather.lat}&lon=#{@weather.lng}&name=#{@weather.address}" %> id="forecast_embed" type="text/html" frameborder="0" height="245"></IFRAME>
+    <IFRAME src=<%= "http://forecast.io/embed/#lat=#{@weather.lat}&lon=#{@weather.lng}&name=#{@weather.address}" %> class="embed" type="text/html" frameborder="0" height="245"></IFRAME>
 
     <iframe
-    width="90%"
-    height="450"
-    frameborder="0" style="border:2px solid"
-    src= <% "https://www.google.com/maps/embed/v1/place?key=AIzaSyANsWZLOyo2JZHehEd2cZuSBo9CBikIVkU
-      &q=#{@weather.address}" %> >
+    class="embed map"
+    src= "https://www.google.com/maps/embed/v1/view?key=AIzaSyANsWZLOyo2JZHehEd2cZuSBo9CBikIVkU
+      &center= <%= @weather.lat %>, <%= @weather.lng%>&zoom=13"%>>
     </iframe>
 
 </div>

@@ -1,0 +1,15 @@
+Mon, 04 Aug 2014 20:21:54 -0700
+README.rdoc	Fri, 18 Jul 2014 15:13:40 -0700
+app/controllers/application_controller.rb	Fri, 18 Jul 2014 15:13:40 -0700
+app/controllers/sessions_controller.rb	Sun, 20 Jul 2014 13:17:06 -0700
+app/controllers/users_controller.rb	Mon, 04 Aug 2014 20:07:48 -0700
+app/controllers/weathers_controller.rb	Mon, 04 Aug 2014 20:20:31 -0700
+app/controllers/welcome_controller.rb	Thu, 24 Jul 2014 19:31:30 -0700
+app/helpers/application_helper.rb	Fri, 18 Jul 2014 15:13:40 -0700
+app/helpers/errors_helper.rb	Thu, 24 Jul 2014 15:26:28 -0700
+app/helpers/sessions_helper.rb	Sun, 20 Jul 2014 13:05:43 -0700
+app/helpers/users_helper.rb	Sun, 20 Jul 2014 12:11:29 -0700
+app/helpers/weathers_helper.rb	Fri, 18 Jul 2014 15:24:47 -0700
+app/helpers/welcome_helper.rb	Fri, 18 Jul 2014 15:26:15 -0700
+app/models/user.rb	Mon, 04 Aug 2014 19:57:43 -0700
+app/models/weather.rb	Mon, 04 Aug 2014 20:08:35 -0700

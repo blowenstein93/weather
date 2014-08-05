@@ -1,4 +1,3 @@
-
 class WeathersController < ApplicationController
     def new
         @weather = Weather.new
@@ -41,6 +40,8 @@ class WeathersController < ApplicationController
 
     def show
         @weather = Weather.find(params[:id])
+        @embed_url = "https://www.google.com/maps/embed/v1/view?key=AIzaSyANsWZLOyo2JZHehEd2cZuSBo9CBikIVkU
+      &center=#{@weather.lat}, #{@weather.lng}"
     end
 
     def index

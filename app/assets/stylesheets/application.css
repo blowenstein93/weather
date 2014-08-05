@@ -295,15 +295,18 @@ a{
 .forecast li{
     list-style-type: none;
 }
-#forecast_embed{
-    padding-top:50px;
+.embed{
     width:75%;
+    margin-top:40px;
     margin-left:auto;
     margin-right:auto;
     display:block;
 }
 
-
+.map {
+    height:500px;
+    border:1px solid;
+}
 .hide{
     visibility:hidden;
 }

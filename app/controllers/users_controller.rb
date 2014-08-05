@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.email = @user.email.downcase
     if @user.save
         redirect_to (user_path(@user.id))
     else
@@ -38,7 +39,7 @@ class UsersController < ApplicationController
   end
 
   def search
-    user = User.where(email: params[:email]).first
+    user = User.where(email: params[:email].downcase).first
     if user.nil?
       redirect_to root_path
     end

@@ -18,7 +18,7 @@
             "/weathers-text/#{w.id}", method: :post, class: "lastele" %>
             </h4>
 
-             <IFRAME src=<%= "http://forecast.io/embed/#lat=#{w.lat}&lon=#{w.lng}&name=#{w.address}" %> id="forecast_embed" type="text/html" frameborder="0" height="245"></IFRAME>
+             <IFRAME class="embed" src=<%= "http://forecast.io/embed/#lat=#{w.lat}&lon=#{w.lng}&name=#{w.address}" %> id="forecast_embed" type="text/html" frameborder="0" height="245"></IFRAME>
 
 
         </div>

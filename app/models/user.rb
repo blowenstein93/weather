@@ -73,12 +73,6 @@ class User < ActiveRecord::Base
                     msg = msg + "in the next hour"
                 when forecast.rain_four > 0.5
                     msg = msg + "in four hours"
-                when forecast.rain_seven > 0.5
-                    msg = msg + "in seven hours"
-                when forecast.rain_ten > 0.5
-                    msg = msg + "in ten hours"
-                when forecast.rain_thirt > 0.5
-                    msg = msg + "in thirteen hours. I'll remind you again later. "
                 end
                 msg = msg+"\n-Your friends at WeatherAlert"
                 begin
