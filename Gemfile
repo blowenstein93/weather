@@ -49,7 +49,6 @@ gem 'rufus-scheduler'
 
 gem 'unicorn'
 
-
 ruby '2.0.0'
 
 # Use ActiveModel has_secure_password
