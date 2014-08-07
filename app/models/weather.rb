@@ -41,7 +41,7 @@ belongs_to :user
             response = client.account.messages.create( {
                 :body => "The weather outside is " + weather.weather + ". This was a test message sent from WeatherAlert. Add me to your contacts!",
                 :to => phone,
-                :from => "+19147757419",
+                :from => ENV["my_number"],
             })
 
             puts response.body
