@@ -306,6 +306,7 @@ a{
 .map {
     height:500px;
     border:1px solid;
+    margin-bottom:80px;
 }
 .hide{
     visibility:hidden;
