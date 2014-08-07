@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
 
     def self.daily_text
-        @client = Twilio::REST::Client.new("AC35d0abacd00f2ffcc065ca1d53c8b930", "0b1863df59c77930f6d4a12352be5679")
+        @client = Twilio::REST::Client.new(ENV["twilio_user"], ENV["twilio_pass"])
 
         User.all.each do |user|
 
@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
 
 
     def self.weekly_text
-        @client = Twilio::REST::Client.new("AC35d0abacd00f2ffcc065ca1d53c8b930", "0b1863df59c77930f6d4a12352be5679")
+        @client = Twilio::REST::Client.new((ENV["twilio_user"], ENV["twilio_pass"])
 
         User.all.each do |user|
             @weathers = Weather.where(user_id: user.id)
@@ -60,7 +60,7 @@ class User < ActiveRecord::Base
     end
 
     def self.rain_ntf
-        @client = Twilio::REST::Client.new("AC35d0abacd00f2ffcc065ca1d53c8b930", "0b1863df59c77930f6d4a12352be5679")
+        @client = Twilio::REST::Client.new((ENV["twilio_user"], ENV["twilio_pass"])
         User.all.each do |user|
             @weathers = Weather.where(user_id: user.id)
             @weathers.each do |forecast|

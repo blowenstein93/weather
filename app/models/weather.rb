@@ -31,8 +31,8 @@ belongs_to :user
 
 
     def self.text(id)
-        account_sid = "AC35d0abacd00f2ffcc065ca1d53c8b930"
-        auth = "0b1863df59c77930f6d4a12352be5679"
+        account_sid = ENV["twilio_user"]
+        auth = ENV["twilio_pass"]
         weather = Weather.find(id)
         user = User.find(weather.user_id)
         phone = user.phone.to_i
