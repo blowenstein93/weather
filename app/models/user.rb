@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
                     msg = msg + ".\nHumidity: #{forecast.humidity * 100}%. \nCurrent Temp: #{forecast.temp.round} \nTemp in 5 hours: #{forecast.temp_five.round} \n-Your friends at WeatherAlert"
                     begin
                         @client.account.messages.create({
-                            :from => 9147757419,
+                            :from => ENV["my_number"],
                             :to => user.phone,
                             :body => msg
                         })
