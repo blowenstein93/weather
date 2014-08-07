@@ -1,28 +1,9 @@
-== README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+weather-text.herokuapp.com
+===
 
-Things you may want to cover:
+With WeatherAlert, you don't have to check your phone. You'll be told the weather either at the start of each day or week. And alerted when there's any significant changes in temperature or a chance of rain in a few hours.
+Weather Alert utilizes google's geocoding api in conjunction with darksky's weather api to get the weather data. The text messages are sent using twilio's texting api and the whenever gem to schedule the texts.
 
-* Ruby version
+If you'd like a higher degree of precision or have any other ideas about how to make WeatherAlert a better tool please email me here.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

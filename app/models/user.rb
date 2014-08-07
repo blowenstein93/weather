@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
 
             @weathers = Weather.where(user_id: user.id)
             @weathers.each do |forecast|
-                if forecast.weekly
+                if forecast.daily
                     msg = "Summary: #{forecast.weather}"
                     if forecast.precip_prb > 0.5
                         msg = msg + ". \nIt's probably going to rain #{forecast.precip_amt} with probability #{forecast.precip_prb * 100}%"

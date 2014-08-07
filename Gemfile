@@ -49,6 +49,9 @@ gem 'rufus-scheduler'
 
 gem 'unicorn'
 
+gem 'iron_cache'
+gem 'iron_worker_ng'
+
 ruby '2.0.0'
 
 # Use ActiveModel has_secure_password
