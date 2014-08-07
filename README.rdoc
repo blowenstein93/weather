@@ -1,4 +1,4 @@
-
+===
 weather-text.herokuapp.com
 
 With WeatherAlert, you don't have to check your phone. You'll be told the weather either at the start of each day or week. And alerted when there's any significant changes in temperature or a chance of rain in a few hours.
