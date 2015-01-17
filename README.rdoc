@@ -6,3 +6,7 @@ Weather Alert utilizes google's geocoding api in conjunction with darksky's weat
 
 If you'd like a higher degree of precision or have any other ideas about how to make WeatherAlert a better tool please email me here.
 
+
+TODO
+===
+add disqus

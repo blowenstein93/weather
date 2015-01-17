@@ -1,0 +1,25 @@
+runtime "ruby"
+
+# name the worker
+name "Master"
+
+# include all the gems
+gem "iron_worker_ng"
+gem 'activerecord'
+gem 'activemodel'
+gem 'pg'
+gem 'twilio-ruby'
+
+
+# make sure pg is good to go
+full_remote_build true
+
+# include iron.io and twilio settings
+file "../config/application.rb"
+
+# include user model
+dir "../app/models"
+file "../app/models/user.rb"
+
+# worker file to be executed
+exec "master.rb"

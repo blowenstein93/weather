@@ -1,5 +1,3 @@
-require 'rufus-scheduler'
-
 class UsersController < ApplicationController
   def new
     @user = User.new

@@ -27,7 +27,7 @@ var fade = function(node) {
             setTimeout(step, 50);
         }
     };
-    setTimeout(step, 100);
+    step();
 }
 
 

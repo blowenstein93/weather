@@ -85,6 +85,14 @@ hr {
     overflow: hidden;
 }
 
+.fineText{
+    background-color:#CCC;
+    height:100px;
+    margin:0;
+    display:block;
+    overflow: hidden;
+}
+
 .expl_left{
     display:block;
     float:left;
@@ -121,6 +129,8 @@ hr {
 .action{
     border:none;
     background-color:#f2292c;
+    border-radius:15px;
+    padding:15px;
     margin-left:auto;
     margin-right:auto;
     display:block;
